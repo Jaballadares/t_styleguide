@@ -1,40 +1,101 @@
-/*
-Error: Invalid CSS after "}": expected "}", was ""
-        on line 98 of library/scss/styles.scss
+/**** Colors ****/
+.sg-label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-bottom: 1em; }
 
-93: footer.details span {
-94:   font-weight: normal;
-95:   display: block;
-96: }
+.swatch-container {
+  -moz-perspective: 1000;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  display: inline-block;
+  text-align: left; }
 
-Backtrace:
-library/scss/styles.scss:98
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/scss/parser.rb:1165:in `expected'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/scss/parser.rb:1101:in `expected'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/scss/parser.rb:1096:in `tok!'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/scss/parser.rb:643:in `block'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/scss/parser.rb:635:in `ruleset'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/scss/parser.rb:660:in `block_child'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/scss/parser.rb:653:in `block_contents'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/scss/parser.rb:42:in `parse'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/engine.rb:393:in `_to_tree'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/engine.rb:285:in `render_with_sourcemap'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/listen-2.10.0/lib/listen/listener.rb:291:in `call'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/listen-2.10.0/lib/listen/listener.rb:291:in `_process_changes'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/listen-2.10.0/lib/listen/listener.rb:255:in `block in _wait_for_changes'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/listen-2.10.0/lib/listen/listener.rb:238:in `loop'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/listen-2.10.0/lib/listen/listener.rb:238:in `_wait_for_changes'
-/Users/jballadares/.rvm/gems/ruby-2.2.1/gems/listen-2.10.0/lib/listen/listener.rb:327:in `block in _start_wait_thread'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 98 of library/scss/styles.scss\A \A 93: footer.details span {\A 94:   font-weight: normal;\A 95:   display: block;\A 96: }"; }
+.hex-code {
+  cursor: pointer; }
+  .hex-code:hover {
+    background: #00ABC9; }
+
+.colors {
+  text-align: center; }
+
+.swatch-container,
+.front,
+.back {
+  width: 200px;
+  height: 246px; }
+
+.front {
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.front {
+  z-index: 2;
+  cursor: pointer; }
+
+.green {
+  background: #62a70f; }
+  .green .hover-notification {
+    color: #62a70f; }
+
+.grey {
+  background: #54575a; }
+
+.purple {
+  background: #8332a7; }
+  .purple .hover-notification {
+    color: #8332a7; }
+
+.white {
+  background: #ffffff; }
+  .white .details {
+    border-top: 1px solid #54575a; }
+  .white .hover-notification {
+    color: white;
+    transition: all 0.5s ease; }
+
+.front.white:hover > .hover-notification {
+  color: #54575a; }
+
+.blue .hover-notification {
+  color: #003D4C; }
+
+footer.details {
+  position: absolute;
+  bottom: 0;
+  height: 26%;
+  width: 100%;
+  background-color: #fff;
+  color: #222;
+  padding: 10px;
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.1rem; }
+
+footer.details, span {
+  font-weight: normal;
+  display: block; }
+
+.click-notification {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem; }
+
+.hover-notification {
+  transition: all 0.5s ease;
+  text-align: center; }
+
+.front:hover > .hover-notification {
+  color: white;
+  text-align: center;
+  display: block; }
+
+.underline {
+  text-decoration: underline; }

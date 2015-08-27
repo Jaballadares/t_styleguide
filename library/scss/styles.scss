@@ -23,6 +23,9 @@
 
 .hex-code {
   cursor: pointer;
+  &:hover {
+    background: #00ABC9;
+  }
 }
 
 .colors {
@@ -50,32 +53,49 @@
 
 .front {
   z-index: 2;
-  &:hover {
-    &:after {
-      content: 'copy to clipboard';
-      color: white;
-      position: absolute;
-      left: 20%;
-      .white {
-        color: $grey;
-      }
-    }
+  cursor: pointer;
 }
+
 .green {
   background: $green;
+  .hover-notification {
+    color: $green;
+  }
 }
+
 .grey {
   background: $grey;
 }
+
 .purple {
   background: $purple;
+  .hover-notification {
+    color: $purple;
+  }
 }
+
 .white {
   background: $white;
   .details {
     border-top: 1px solid $grey;
   }
+  .hover-notification {
+    color: white;
+    transition: all 0.5s ease;
+  }
 }
+
+.front.white:hover>.hover-notification {
+  color: $grey;
+}
+
+.blue {
+  .hover-notification {
+    color: $blue;
+  }
+}
+
+
 
 footer.details {
   position: absolute;
@@ -90,8 +110,28 @@ footer.details {
   font-size: 1.1rem;
 }
 
-footer.details span {
+footer.details, span {
   font-weight: normal;
   display: block;
 }
 
+.click-notification {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.hover-notification {
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.front:hover>.hover-notification {
+  color: white;
+  text-align: center;
+  display: block;
+}
+
+.underline {
+  text-decoration: underline;
+}

@@ -11,7 +11,7 @@ copyEmailBtn.addEventListener('click', function(event) {
     var successful = document.execCommand('copy');
     var msg = successful ? 'successful' : 'unsuccessful';
     console.log('Copy email command was ' + msg);
-  } catch(err) {
+  } catch (err) {
     console.log('Oops, unable to copy');
   }
 
@@ -20,5 +20,9 @@ copyEmailBtn.addEventListener('click', function(event) {
   window.getSelection().removeAllRanges();
 });
 
+function changeNotification() {
+  var x = $(this).children($('.hover-notification'));
+  x.html('Copied!');
+}
 
-document.getElementById('')
+$('.front').click(changeNotification);
