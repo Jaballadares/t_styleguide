@@ -1,0 +1,97 @@
+@import "meta/variables";
+
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+.sg-label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-bottom: 1em;
+}
+
+.swatch-container {
+  -moz-perspective: 1000;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  display: inline-block;
+  text-align: left;
+}
+
+.hex-code {
+  cursor: pointer;
+}
+
+.colors {
+  text-align: center;
+}
+
+.swatch-container,
+.front,
+.back {
+  width: 200px;
+  height: 246px;
+}
+
+.front {
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  &:hover {
+    &:after {
+      content: 'copy to clipboard';
+      color: white;
+      position: absolute;
+      left: 20%;
+      .white {
+        color: $grey;
+      }
+    }
+}
+.green {
+  background: $green;
+}
+.grey {
+  background: $grey;
+}
+.purple {
+  background: $purple;
+}
+.white {
+  background: $white;
+  .details {
+    border-top: 1px solid $grey;
+  }
+}
+
+footer.details {
+  position: absolute;
+  bottom: 0;
+  height: 26%;
+  width: 100%;
+  background-color: #fff;
+  color: #222;
+  padding: 10px;
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+footer.details span {
+  font-weight: normal;
+  display: block;
+}
+
