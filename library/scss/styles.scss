@@ -59,18 +59,21 @@
 .green {
   background: $green;
   .hover-notification {
-    color: $green;
+    background: $green;
   }
 }
 
 .grey {
   background: $grey;
+  .hover-notification {
+    background: $grey;
+  }
 }
 
 .purple {
   background: $purple;
   .hover-notification {
-    color: $purple;
+    background: $purple;
   }
 }
 
@@ -80,7 +83,8 @@
     border-top: 1px solid $grey;
   }
   .hover-notification {
-    color: white;
+    background: white;
+    color: $grey;
     transition: all 0.5s ease;
   }
 }
@@ -91,7 +95,7 @@
 
 .blue {
   .hover-notification {
-    color: $blue;
+    background: $blue;
   }
 }
 
@@ -124,12 +128,25 @@ footer.details, span {
 .hover-notification {
   transition: all 0.5s ease;
   text-align: center;
+  height: 75%;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  font-size: 1.1rem;
 }
 
-.front:hover>.hover-notification {
+.button-wrap {
+  display: none;
+  transition: all 0.9s ease;
+}
+
+
+
+.front:hover>.button-wrap {
   color: white;
   text-align: center;
   display: block;
+  height: 100%;
 }
 
 .underline {

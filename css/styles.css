@@ -43,29 +43,32 @@
 .green {
   background: #62a70f; }
   .green .hover-notification {
-    color: #62a70f; }
+    background: #62a70f; }
 
 .grey {
   background: #54575a; }
+  .grey .hover-notification {
+    background: #54575a; }
 
 .purple {
   background: #8332a7; }
   .purple .hover-notification {
-    color: #8332a7; }
+    background: #8332a7; }
 
 .white {
   background: #ffffff; }
   .white .details {
     border-top: 1px solid #54575a; }
   .white .hover-notification {
-    color: white;
+    background: white;
+    color: #54575a;
     transition: all 0.5s ease; }
 
 .front.white:hover > .hover-notification {
   color: #54575a; }
 
 .blue .hover-notification {
-  color: #003D4C; }
+  background: #003D4C; }
 
 footer.details {
   position: absolute;
@@ -90,12 +93,22 @@ footer.details, span {
 
 .hover-notification {
   transition: all 0.5s ease;
-  text-align: center; }
+  text-align: center;
+  height: 75%;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  font-size: 1.1rem; }
 
-.front:hover > .hover-notification {
+.button-wrap {
+  display: none;
+  transition: all 0.9s ease; }
+
+.front:hover > .button-wrap {
   color: white;
   text-align: center;
-  display: block; }
+  display: block;
+  height: 100%; }
 
 .underline {
   text-decoration: underline; }
