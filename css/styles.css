@@ -40,20 +40,42 @@
   z-index: 2;
   cursor: pointer; }
 
+.success {
+  width: 100%;
+  text-align: center;
+  height: 75%;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  font-size: 1.9rem;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  bottom: 50%; }
+
 .green {
   background: #62a70f; }
   .green .hover-notification {
     background: #62a70f; }
+  .green .success {
+    background: #62a70f;
+    color: white; }
 
 .grey {
   background: #54575a; }
   .grey .hover-notification {
     background: #54575a; }
+  .grey .success {
+    background: #54575a;
+    color: white; }
 
 .purple {
   background: #8332a7; }
   .purple .hover-notification {
     background: #8332a7; }
+  .purple .success {
+    background: #8332a7;
+    color: white; }
 
 .white {
   background: #ffffff; }
@@ -63,12 +85,19 @@
     background: white;
     color: #54575a;
     transition: all 0.5s ease; }
+  .white .success {
+    background: #ffffff;
+    color: #54575a; }
 
 .front.white:hover > .hover-notification {
   color: #54575a; }
 
 .blue .hover-notification {
   background: #003D4C; }
+
+.blue .success {
+  background: #003D4C;
+  color: #ffffff; }
 
 footer.details {
   position: absolute;
@@ -110,5 +139,39 @@ footer.details, span {
   display: block;
   height: 100%; }
 
+.sg-section-header {
+  font-weight: 400; }
+
 .underline {
   text-decoration: underline; }
+
+.show {
+  display: block;
+  position: absolute;
+  top: 0; }
+
+.typography {
+  background: whitesmoke;
+  vertical-align: middle; }
+  .typography .sg-section-header {
+    background: white;
+    width: 100%; }
+  .typography .font {
+    margin: 0 auto;
+    font-size: 2.3rem; }
+
+.light {
+  font-weight: 300;
+  letter-spacing: 0.07rem; }
+
+.regular {
+  font-weight: 400;
+  letter-spacing: 0.04rem; }
+
+.semi-bold {
+  font-weight: 600;
+  letter-spacing: 0.04rem; }
+
+.bold {
+  font-weight: 700;
+  letter-spacing: 0.04rem; }

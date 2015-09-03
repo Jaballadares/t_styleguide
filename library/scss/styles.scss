@@ -56,10 +56,28 @@
   cursor: pointer;
 }
 
+.success {
+  width: 100%;
+  text-align: center;
+  height: 75%;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  font-size: 1.9rem;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+}
+
 .green {
   background: $green;
   .hover-notification {
     background: $green;
+  }
+  .success {
+    background: $green;
+    color: white;
   }
 }
 
@@ -68,12 +86,20 @@
   .hover-notification {
     background: $grey;
   }
+  .success {
+    background: $grey;
+    color: white;
+  }
 }
 
 .purple {
   background: $purple;
   .hover-notification {
     background: $purple;
+  }
+  .success {
+    background: $purple;
+    color: white;
   }
 }
 
@@ -87,6 +113,10 @@
     color: $grey;
     transition: all 0.5s ease;
   }
+    .success {
+      background: $white;
+      color: $grey;
+    }
 }
 
 .front.white:hover>.hover-notification {
@@ -97,6 +127,10 @@
   .hover-notification {
     background: $blue;
   }
+.success {
+  background: $blue;
+  color: $white;
+}
 }
 
 
@@ -149,6 +183,49 @@ footer.details, span {
   height: 100%;
 }
 
+.sg-section-header {
+  font-weight: 400;
+}
+
 .underline {
   text-decoration: underline;
+}
+
+.show {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.typography {
+  background: lighten($grey, 62%);
+  vertical-align: middle;
+  .sg-section-header {
+    background: white;
+    width: 100%;
+  }
+  .font {
+    margin: 0 auto;
+    font-size: 2.3rem;
+  }
+}
+
+.light {
+  font-weight: 300;
+   letter-spacing: 0.07rem;
+}
+
+.regular {
+  font-weight: 400;
+  letter-spacing: 0.04rem;
+}
+
+.semi-bold {
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+}
+
+.bold {
+  font-weight: 700;
+  letter-spacing: 0.04rem;
 }
