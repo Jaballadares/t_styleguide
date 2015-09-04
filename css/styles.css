@@ -1,4 +1,42 @@
 /**** Colors ****/
+/* ==========================================================================
+  Mixins
+========================================================================== */
+/**** **** **** **** ****
+BREAKPOINTS -
+USAGE: @include breakpoint(small) {}
+**** **** **** **** ****/
+/**** **** **** **** ****
+ANIMATION -
+USAGE: @include animation(name, fadeIn);
+USAGE: @include animation(duration, .15s);
+USAGE: @include animation(delay, 1s);
+USAGE: @include animation(fill-mode, both);
+**** **** **** **** ****/
+/**** **** **** **** ****
+CLEARFIX -
+USAGE: @include clearfix();
+**** **** **** **** ****/
+/**** **** **** **** ****
+PLACEHOLDER -
+USAGE: @include placeholder(#333);
+**** **** **** **** ****/
+/**** **** **** **** ****
+FLEXBOX!
+USAGE: @include flexbox();
+**** **** **** **** ****/
+/**** **** **** **** ****
+FLEX
+USAGE: @include flex(1 1 200px);
+**** **** **** **** ****/
+/**** **** **** **** ****
+ORDER
+USAGE: @include order(2);
+**** **** **** **** ****/
+/***** Opacity Mixin ****/
+body {
+  background: whitesmoke; }
+
 .sg-label {
   font-weight: bold;
   font-size: 1.2rem;
@@ -22,8 +60,8 @@
 .swatch-container,
 .front,
 .back {
-  width: 200px;
-  height: 246px; }
+  width: 125px;
+  height: 160px; }
 
 .front {
   -moz-backface-visibility: hidden;
@@ -47,7 +85,7 @@
   width: 100%;
   cursor: pointer;
   color: white;
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   vertical-align: middle;
   position: absolute;
   top: 50%;
@@ -102,7 +140,7 @@
 footer.details {
   position: absolute;
   bottom: 0;
-  height: 26%;
+  height: 35%;
   width: 100%;
   background-color: #fff;
   color: #222;
@@ -133,6 +171,9 @@ footer.details, span {
   display: none;
   transition: all 0.9s ease; }
 
+button:focus {
+  outline: 0; }
+
 .front:hover > .button-wrap {
   color: white;
   text-align: center;
@@ -140,7 +181,9 @@ footer.details, span {
   height: 100%; }
 
 .sg-section-header {
-  font-weight: 400; }
+  font-weight: 400;
+  width: 100%;
+  margin-bottom: 3rem; }
 
 .underline {
   text-decoration: underline; }
@@ -150,15 +193,32 @@ footer.details, span {
   position: absolute;
   top: 0; }
 
+/*****************************************************
+
+  Typography Section Styles
+
+*******************************************************/
+.font-weight-wrapper {
+  margin: 0 auto;
+  background: #ffffff;
+  width: 70%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
+  @media (max-width: 767px) {
+    .font-weight-wrapper {
+      width: 80%; } }
+
+.type {
+  padding-top: 2rem; }
+
 .typography {
-  background: whitesmoke;
   vertical-align: middle; }
-  .typography .sg-section-header {
-    background: white;
-    width: 100%; }
   .typography .font {
-    margin: 0 auto;
-    font-size: 2.3rem; }
+    margin: 0 15%;
+    font-size: 2.3rem;
+    padding-top: 1.5rem; }
+    @media (max-width: 767px) {
+      .typography .font {
+        font-size: 1.5rem; } }
 
 .light {
   font-weight: 300;
@@ -175,3 +235,62 @@ footer.details, span {
 .bold {
   font-weight: 700;
   letter-spacing: 0.04rem; }
+
+.panel {
+  border-radius: 4px;
+  background: #ffffff; }
+
+.weight-spacing {
+  margin: 0 15%; }
+
+/*****************************************************
+
+  UI Elements Section Styles
+
+*******************************************************/
+.ui-things {
+  background: #ffffff;
+  margin: 0 auto; }
+  .ui-things::after {
+    content: '';
+    display: block;
+    clear: both; }
+
+.ui-elements {
+  padding-top: 3rem; }
+
+.panel-examples {
+  padding-top: 1rem;
+  margin: 0 8%; }
+
+#tl-checkbox {
+  position: absolute;
+  left: -9999px; }
+  #tl-checkbox:checked + .tl-label::after {
+    display: block; }
+
+.tl-label {
+  position: relative;
+  margin: 10px 0;
+  padding-left: 35px;
+  cursor: pointer; }
+  .tl-label::before,
+  .tl-label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-radius: 50%; }
+
+.tl-label::before {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-color: #54575a; }
+
+.tl-label::after {
+  display: none;
+  width: 14px;
+  height: 14px;
+  margin: 3px;
+  background-color: #54575a; }

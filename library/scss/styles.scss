@@ -1,4 +1,4 @@
-@import "meta/variables";
+@import "meta/variables", "meta/mixins";
 
 
 @mixin opacity($opacity) {
@@ -7,6 +7,9 @@
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
+body {
+  background: lighten($grey, 62%);
+}
 .sg-label {
   font-weight: bold;
   font-size: 1.2rem;
@@ -35,8 +38,8 @@
 .swatch-container,
 .front,
 .back {
-  width: 200px;
-  height: 246px;
+  width: 125px;
+  height: 160px;
 }
 
 .front {
@@ -63,7 +66,7 @@
   width: 100%;
   cursor: pointer;
   color: white;
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   vertical-align: middle;
   position: absolute;
   top: 50%;
@@ -138,7 +141,7 @@
 footer.details {
   position: absolute;
   bottom: 0;
-  height: 26%;
+  height: 35%;
   width: 100%;
   background-color: #fff;
   color: #222;
@@ -174,7 +177,9 @@ footer.details, span {
   transition: all 0.9s ease;
 }
 
-
+button:focus {
+  outline: 0;
+}
 
 .front:hover>.button-wrap {
   color: white;
@@ -185,6 +190,8 @@ footer.details, span {
 
 .sg-section-header {
   font-weight: 400;
+  width: 100%;
+  margin-bottom: 3rem;
 }
 
 .underline {
@@ -197,18 +204,39 @@ footer.details, span {
   top: 0;
 }
 
-.typography {
-  background: lighten($grey, 62%);
-  vertical-align: middle;
-  .sg-section-header {
-    background: white;
-    width: 100%;
-  }
-  .font {
-    margin: 0 auto;
-    font-size: 2.3rem;
+
+/*****************************************************
+
+  Typography Section Styles
+
+*******************************************************/
+
+.font-weight-wrapper {
+  margin: 0 auto;
+  background: $white;
+  width: 70%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  @include breakpoint(small) {
+    width: 80%;
   }
 }
+
+.type {
+  padding-top: 2rem;
+}
+.typography {
+  vertical-align: middle;
+
+  .font {
+    margin: 0 15%;
+    font-size: 2.3rem;
+    padding-top: 1.5rem;
+    @include breakpoint(small) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
 
 .light {
   font-weight: 300;
@@ -228,4 +256,76 @@ footer.details, span {
 .bold {
   font-weight: 700;
   letter-spacing: 0.04rem;
+}
+
+.panel {
+  border-radius: 4px;
+  background: $white;
+}
+
+.weight-spacing {
+  margin: 0 15%;
+}
+
+/*****************************************************
+
+  UI Elements Section Styles
+
+*******************************************************/
+
+.ui-things {
+  background: $white;
+  margin: 0 auto;
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.ui-elements {
+  padding-top: 3rem;
+}
+
+.panel-examples {
+  padding-top: 1rem;
+  margin: 0 8%;
+}
+
+#tl-checkbox {
+  position: absolute;
+  left: -9999px;
+  &:checked + .tl-label::after {
+    display: block;
+  }
+}
+
+.tl-label {
+  position: relative;
+  margin: 10px 0;
+  padding-left: 35px;
+  cursor: pointer;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+  }
+}
+
+.tl-label::before {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $white;
+  border-color: $grey;
+}
+
+.tl-label::after {
+  display: none;
+  width: 14px;
+  height: 14px;
+  margin: 3px;
+  background-color: $grey;
 }

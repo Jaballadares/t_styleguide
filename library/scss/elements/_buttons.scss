@@ -4,15 +4,14 @@
 
 
 .btn {
-  background: #333;
+  background: $blue;
   color: #fff;
   border: none;
   padding: 8px 18px 6px;
   min-width: 100px;
-  font-size: 12px;
+  font-size: .8rem;
   display: inline-block;
   margin: 0;
-  text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -23,12 +22,13 @@
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  @include medium-font();
+  width: 130px;
+  // @include medium-font();
   border-radius: 2px;
-  transition: all .15s ease-in-out;
+  transition: all .23s ease-in-out 0s;
   &:hover,
   &:focus {
-    background: #777;
+    background: lighten($blue, 15%);
     color: #fff;
     border: none;
   }
@@ -76,6 +76,7 @@
     background: darken(#b4bcbc, 10%);
   }
 }
+
 
 .btn-large {
   font-size: 15px;
