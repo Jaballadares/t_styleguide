@@ -292,6 +292,10 @@ button:focus {
   margin: 0 8%;
 }
 
+.checkbox-section {
+  padding-bottom: 1rem;
+}
+
 #tl-checkbox {
   position: absolute;
   left: -9999px;
@@ -315,7 +319,7 @@ button:focus {
 }
 
 .tl-label::before {
-  display: block;
+  display: flex;
   width: 20px;
   height: 20px;
   border: 2px solid $white;
@@ -324,8 +328,21 @@ button:focus {
 
 .tl-label::after {
   display: none;
-  width: 14px;
-  height: 14px;
-  margin: 3px;
+  width: 12px;
+  height: 12px;
+  margin: 4px;
   background-color: $grey;
+}
+
+.glyphs {
+  padding-top: 3rem;
+  .row {
+      background: $white;
+      margin: 0 auto;
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+  }
 }

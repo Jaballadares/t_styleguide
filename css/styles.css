@@ -263,6 +263,9 @@ button:focus {
   padding-top: 1rem;
   margin: 0 8%; }
 
+.checkbox-section {
+  padding-bottom: 1rem; }
+
 #tl-checkbox {
   position: absolute;
   left: -9999px; }
@@ -282,7 +285,7 @@ button:focus {
     border-radius: 50%; }
 
 .tl-label::before {
-  display: block;
+  display: flex;
   width: 20px;
   height: 20px;
   border: 2px solid #ffffff;
@@ -290,7 +293,17 @@ button:focus {
 
 .tl-label::after {
   display: none;
-  width: 14px;
-  height: 14px;
-  margin: 3px;
+  width: 12px;
+  height: 12px;
+  margin: 4px;
   background-color: #54575a; }
+
+.glyphs {
+  padding-top: 3rem; }
+  .glyphs .row {
+    background: #ffffff;
+    margin: 0 auto; }
+    .glyphs .row::after {
+      content: '';
+      display: block;
+      clear: both; }
