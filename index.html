@@ -11,16 +11,36 @@
 </head>
 
 <body>
-  <header class="container">
-    <h1>Talix</h1>
-  </header>
-  <div class="container">
 
+  <div class="sidebar-wrap">
+    <div class="sidebar">
+    <h1>
+      <a href="index.html" class="brandLogo">
+        <img src="library/images/talix-small-white.png" alt="">
+      </a>
+    </h1>
+    <nav role="navigation">
+      <ul class="side-nav">
+        <li class="heading"><a href="#colors">Colors</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#ui-elements">UI Elements</a></li>
+        <li><a href="#icons">Icons</a></li>
+      </ul>
+    </nav>
+    </div>
+  </div>
+
+<section class="main-section">
+  <div class="primary-container">
+  <div class="container first-container">
+  <h1>Styles</h1>
+  <div class="colors-section">
     <div class="row">
 
       <!-- end typography -->
-      <div class="color-palette col-md-12">
+      <div class="color-palette col-md-11" id="colors">
         <h2 class="sg-section-header">Colors</h2>
+          <div class="row click-notification"><u>Click</u> color to copy to clipboard</div>
         <section class="colors">
           <div class="swatch-container pt-7241c">
 
@@ -100,74 +120,131 @@
       </div>
 
 
-
+</div>
       <!-- end color palette div -->
     </div>
-    <div class="row click-notification"><u>Click</u> color to copy to clipboard</div>
 
   </div>
 
 
-<div class="container type">
-  <h2 class="sg-section-header">Typography</h2>
-</div>
+  <div class="container type" id="typography">
+    <h2 class="sg-section-header">Typography</h2>
+  </div>
 
   <div class="container typography">
 
-      <div class="font-weight-wrapper">
-        <p class="font light">Source Sans Pro Light</p>
-        <p class="weight-spacing">Weight: 300, Letter Spacing: 0.07rem</p>
-        <p class="font regular">Source Sans Pro Regular</p>
-        <p class="weight-spacing">Weight: 400, Letter Spacing: 0.04rem</p>
+    <div class="font-weight-wrapper">
+      <p class="font light">Source Sans Pro Light</p>
+      <p class="weight-spacing">Weight: 300, Letter Spacing: 0.07rem</p>
+      <p class="font regular">Source Sans Pro Regular</p>
+      <p class="weight-spacing">Weight: 400, Letter Spacing: 0.04rem</p>
 
-        <p class="font semi-bold">Source Sans Pro Semi-bold</p>
-        <p class="weight-spacing">Weight: 600, Letter Spacing: 0.04rem</p>
-        <p class="font bold">Source Sans Pro Bold</p>
-        <p class="weight-spacing" style="padding-bottom: 1.5rem;">Weight: 700, Letter Spacing: 0.04rem</p>
-  </div>
+      <p class="font semi-bold">Source Sans Pro Semi-bold</p>
+      <p class="weight-spacing">Weight: 600, Letter Spacing: 0.04rem</p>
+      <p class="font bold">Source Sans Pro Bold</p>
+      <p class="weight-spacing" style="padding-bottom: 1.5rem;">Weight: 700, Letter Spacing: 0.04rem</p>
+    </div>
   </div>
 
-  <div class="container ui-elements">
-  <h2 class="sg-section-header">UI Elements</h2>
+  <div class="container ui-elements" id="ui-elements">
+    <h2 class="sg-section-header">UI Elements</h2>
     <div class="row ui-things">
       <div class="button-examples panel-examples">
         <h3>Buttons</h3>
+        <button class="btn-small">Small Button</button>
         <button class="btn">Small Button</button>
         <a href="" class="btn">Small Button</a>
+
+        <button class="btn btn-green">Green Button</button>
       </div>
+
 
       <div class="checkbox-examples panel-examples">
         <section class="checkbox-section">
-        <h3>Checkbox Examples</h3>
-        <input type="checkbox" id="tl-checkbox">
-        <label for="tl-checkbox" class="tl-label"></label>
+          <h3>Checkbox Examples</h3>
+          <input type="checkbox" id="tl-checkbox">
+          <label for="tl-checkbox" class="tl-label"></label>
         </section>
       </div>
 
     </div>
   </div>
 
-  <div class="container glyphs">
-          <h2 class="sg-section-header">Glyphicons</h2>
+  <div class="container icons" id="icons">
+    <h2 class="sg-section-header">Icons</h2>
+  </div>
 
-    <div class="row">
-      <span class="glyphicon glyphicon-trash"></span>
-      <span class="glyphicon glyphicon-pencil"></span>
-      <span class="glyphicon glyphicon-search"></span>
+  <div class="container iconography">
+    <div class="iconography-wrapper row">
+
+      <div class="another-wrapper">
+        <div class="icon-wrapper col-md-3">
+          <i class="glyphicon glyphicon-check"></i> .glyphicon-check
+        </div>
+        <div class="icon-wrapper col-md-3">
+          <i class="glyphicon glyphicon-trash"></i> .glyphicon-trash
+        </div>
+        <div class="icon-wrapper col-md-3">
+          <i class="glyphicon glyphicon-tag"></i> .glyphicon-tag
+        </div>
+        <div class="icon-wrapper col-md-3">
+          <i class="glyphicon glyphicon-flag"></i> .glyphicon-flag
+        </div>
+      </div>
+    </div>
+
+    <div class="iconography-wrapper row" style="padding-top: 1rem;">
+
+      <div class="another-wrapper">
+        <div class="icon-wrapper col-md-3">
+          <i class="glyphicon glyphicon-save"></i> .glyphicon-save
+        </div>
+        <div class="icon-wrapper col-md-3">
+          <i class="glyphicon glyphicon-edit"></i> .glyphicon-edit
+        </div>
+        <div class="icon-wrapper col-md-3">
+          <i class="glyphicon glyphicon-print"></i> .glyphicon-print
+        </div>
+        <div class="icon-wrapper col-md-3">
+          <i class="glyphicon glyphicon-ok"></i>
+          .glyphicon-ok
+        </div>
+      </div>
+    </div>
+
+    <div class="iconography-wrapper row" style="padding-top: 1rem;">
+
+      <div class="another-wrapper">
+        <div class="icon-wrapper col-md-3">
+          <i class="glyphicon glyphicon-question-sign"></i> .glyphicon-questions
+        </div>
+        <div class="icon-wrapper col-md-3">
+          <i class="glyphicon glyphicon-edit"></i> .glyphicon-edit
+        </div>
+        <div class="icon-wrapper col-md-3">
+          <i class="glyphicon glyphicon-print"></i> .glyphicon-print
+        </div>
+        <div class="icon-wrapper col-md-3">
+          <i class="glyphicon glyphicon-ok"></i>
+          .glyphicon-ok
+        </div>
+      </div>
     </div>
   </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  </div>
+</section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
   <script src="library/js/styleguide.js"></script>

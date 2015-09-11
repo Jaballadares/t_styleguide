@@ -1,12 +1,9 @@
 @import "meta/variables", "meta/mixins";
-
-
 @mixin opacity($opacity) {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie); //IE8
+  filter:alpha(opacity=$opacity-ie); //IE8
 }
-
 body {
   background: lighten($grey, 62%);
 }
@@ -15,24 +12,19 @@ body {
   font-size: 1.2rem;
   padding-bottom: 1em;
 }
-
 .swatch-container {
   -moz-perspective: 1000;
   -webkit-perspective: 1000;
   perspective: 1000;
   display: inline-block;
   text-align: left;
+  margin: 2rem;
 }
-
 .hex-code {
   cursor: pointer;
   &:hover {
-    background: #00ABC9;
+    background: #00abc9;
   }
-}
-
-.colors {
-  text-align: center;
 }
 
 .swatch-container,
@@ -41,7 +33,6 @@ body {
   width: 125px;
   height: 180px;
 }
-
 .front {
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -53,12 +44,10 @@ body {
   top: 0;
   left: 0;
 }
-
 .front {
   z-index: 2;
   cursor: pointer;
 }
-
 .success {
   width: 100%;
   text-align: center;
@@ -72,7 +61,6 @@ body {
   top: 50%;
   bottom: 50%;
 }
-
 .green {
   background: $green;
   .hover-notification {
@@ -83,7 +71,6 @@ body {
     color: white;
   }
 }
-
 .grey {
   background: $grey;
   .hover-notification {
@@ -94,7 +81,6 @@ body {
     color: white;
   }
 }
-
 .purple {
   background: $purple;
   .hover-notification {
@@ -105,7 +91,6 @@ body {
     color: white;
   }
 }
-
 .white {
   background: $white;
   .details {
@@ -116,28 +101,23 @@ body {
     color: $grey;
     transition: all 0.5s ease;
   }
-    .success {
-      background: $white;
-      color: $grey;
-    }
+  .success {
+    background: $white;
+    color: $grey;
+  }
 }
-
 .front.white:hover>.hover-notification {
   color: $grey;
 }
-
 .blue {
   .hover-notification {
     background: $blue;
   }
-.success {
-  background: $blue;
-  color: $white;
+  .success {
+    background: $blue;
+    color: $white;
+  }
 }
-}
-
-
-
 footer.details {
   position: absolute;
   bottom: 0;
@@ -150,18 +130,16 @@ footer.details {
   text-align: center;
   font-size: 1.1rem;
 }
-
-footer.details, span {
+footer.details,
+span {
   font-weight: normal;
   display: block;
 }
-
 .click-notification {
   font-weight: bold;
   text-align: center;
   font-size: 1.4rem;
 }
-
 .hover-notification {
   transition: all 0.5s ease;
   text-align: center;
@@ -171,46 +149,38 @@ footer.details, span {
   color: white;
   font-size: 1.1rem;
 }
-
 .button-wrap {
   display: none;
   transition: all 0.9s ease;
 }
-
 button:focus {
   outline: 0;
 }
-
 .front:hover>.button-wrap {
   color: white;
   text-align: center;
   display: block;
   height: 100%;
 }
-
 .sg-section-header {
   font-weight: 400;
   width: 100%;
   margin-bottom: 3rem;
 }
-
 .underline {
   text-decoration: underline;
 }
-
 .show {
   display: block;
   position: absolute;
   top: 0;
 }
 
-
 /*****************************************************
 
   Typography Section Styles
 
 *******************************************************/
-
 .font-weight-wrapper {
   margin: 0 auto;
   background: $white;
@@ -220,13 +190,11 @@ button:focus {
     width: 80%;
   }
 }
-
 .type {
   padding-top: 2rem;
 }
 .typography {
   vertical-align: middle;
-
   .font {
     margin: 0 15%;
     font-size: 2.3rem;
@@ -236,33 +204,26 @@ button:focus {
     }
   }
 }
-
-
 .light {
   font-weight: 300;
-   letter-spacing: 0.07rem;
+  letter-spacing: 0.07rem;
 }
-
 .regular {
   font-weight: 400;
   letter-spacing: 0.04rem;
 }
-
 .semi-bold {
   font-weight: 600;
   letter-spacing: 0.04rem;
 }
-
 .bold {
   font-weight: 700;
   letter-spacing: 0.04rem;
 }
-
 .panel {
   border-radius: 4px;
   background: $white;
 }
-
 .weight-spacing {
   margin: 0 15%;
 }
@@ -272,30 +233,24 @@ button:focus {
   UI Elements Section Styles
 
 *******************************************************/
-
 .ui-things {
   background: $white;
-  margin: 0 auto;
   &::after {
     content: '';
     display: block;
     clear: both;
   }
 }
-
 .ui-elements {
   padding-top: 3rem;
 }
-
 .panel-examples {
   padding-top: 1rem;
   margin: 0 8%;
 }
-
 .checkbox-section {
   padding-bottom: 1rem;
 }
-
 #tl-checkbox {
   position: absolute;
   left: -9999px;
@@ -303,7 +258,6 @@ button:focus {
     display: block;
   }
 }
-
 .tl-label {
   position: relative;
   margin: 10px 0;
@@ -317,7 +271,6 @@ button:focus {
     border-radius: 50%;
   }
 }
-
 .tl-label::before {
   display: flex;
   width: 20px;
@@ -325,7 +278,6 @@ button:focus {
   border: 2px solid $white;
   border-color: $grey;
 }
-
 .tl-label::after {
   display: none;
   width: 12px;
@@ -334,15 +286,142 @@ button:focus {
   background-color: $grey;
 }
 
-.glyphs {
-  padding-top: 3rem;
-  .row {
-      background: $white;
-      margin: 0 auto;
-      &::after {
-        content: '';
-        display: block;
-        clear: both;
-      }
+/*****************************************************
+
+Glyphs
+*******************************************************/
+.iconography-wrapper {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: $white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  @include breakpoint(small) {
+    width: 80%;
   }
+}
+
+.another-wrapper {
+  width: 90%;
+  text-align: center;
+}
+
+
+/*****************************************************
+
+Sidebar
+*******************************************************/
+.sidebar-wrap {
+  width: 16.66667%;
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  float: left;
+  @include breakpoint(medium) {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+  .brandLogo {
+    border: none !important;
+    display: inline-block;
+    width: 100%;
+  }
+  .sidebar {
+    position: fixed;
+    z-index: 400;
+    height: 100%;
+    left: 0;
+    border-left: 4px solid #cddfdf;
+    background-color: #eceef3;
+    @include breakpoint(medium) {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border: none;
+    }
+    h1 {
+      display: block;
+      background: $green;
+      padding: 0;
+      margin: 0 0 0 -4px;
+      text-align: center;
+      background-size: auto 100%;
+      background-position: 0 50%;
+      @include breakpoint(medium) {
+        background-size: cover;
+      }
+      a {
+        border: none !important;
+        display:inline-block;
+        width: 100%;
+      }
+      img {
+        margin: 0.75em auto;
+        max-height: 55px;
+        width: auto;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    nav {
+      display: block;
+      ul.side-nav {
+        list-style: none;
+        margin-left: -4px;
+        padding: 0;
+        li {
+          padding-top: 25%;
+          font-size: 1rem;
+          margin-left: 15%;
+          border-left: 4px solid transparent;
+          cursor: pointer;
+          @include breakpoint(medium) {
+            padding-top: 0;
+          }
+          &:hover {
+            background: darken(#eceef3, 5%);
+          }
+          a {
+            color: $blue;
+            @include breakpoint(medium) {
+              line-height: 3;
+              text-align: center;
+              border: none;
+              padding: .5rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    width: 100%;
+  }
+    img {
+      text-align: center;
+      margin: 0 auto;
+      width: 70%;
+      height: auto;
+      @include breakpoint(medium) {
+        display: none;
+      }
+    }
+}
+
+.first-container {
+  padding-top: 5%;
+  h1 {
+    font-weight: 400;
+    color: $blue;
+  }
+}
+
+.main-section {
+  width: 83.3333%;
+  float: right;
+  margin: 0 auto;
+}
+
+.primary-container {
+  float: none;
 }

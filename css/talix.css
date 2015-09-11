@@ -801,6 +801,7 @@ a {
   background: #003D4C;
   color: #fff;
   border: none;
+  border-radius: 4px;
   padding: 8px 18px 6px;
   min-width: 100px;
   font-size: .8rem;
@@ -832,6 +833,36 @@ a {
     .btn {
       display: block;
       width: 100%; } }
+
+.btn-small {
+  min-width: 50px;
+  padding: 8px 18px 6px;
+  border: none;
+  width: 100px;
+  margin: 0;
+  background: #003D4C;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  color: white;
+  border-radius: 4px;
+  transition: all 0.23s ease-in-out 0s; }
+  .btn-small:hover,
+  .btn-small:focus {
+    background: #007a99;
+    color: #fff;
+    border: none; }
+  .btn-small:focus,
+  .btn-small:active {
+    outline: 0;
+    border: none; }
 
 .btn-purple {
   background: #8332a7; }
