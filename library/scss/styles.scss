@@ -71,6 +71,16 @@ body {
     color: white;
   }
 }
+.red {
+  background: $red;
+  .hover-notification {
+    background: $red;
+  }
+  .success {
+    background: $red;
+    color: white;
+  }
+}
 .grey {
   background: $grey;
   .hover-notification {
@@ -139,6 +149,15 @@ span {
   font-weight: bold;
   text-align: center;
   font-size: 1.4rem;
+  @include breakpoint(large) {
+    width: 86.33333%;
+  }
+  @include breakpoint(medium) {
+    width: 83.3333%;
+  }
+  @include breakpoint(small) {
+    width: 85.33333%;
+  }
 }
 .hover-notification {
   transition: all 0.5s ease;
@@ -153,9 +172,7 @@ span {
   display: none;
   transition: all 0.9s ease;
 }
-button:focus {
-  outline: 0;
-}
+
 .front:hover>.button-wrap {
   color: white;
   text-align: center;
@@ -166,6 +183,7 @@ button:focus {
   font-weight: 400;
   width: 100%;
   margin-bottom: 3rem;
+  margin-left: 1.2rem;
 }
 .underline {
   text-decoration: underline;
@@ -176,6 +194,10 @@ button:focus {
   top: 0;
 }
 
+.colors {
+  width: 70%;
+  margin: 0 auto;
+}
 /*****************************************************
 
   Typography Section Styles
@@ -233,12 +255,23 @@ button:focus {
   UI Elements Section Styles
 
 *******************************************************/
+
+.button-examples {
+  .btn {
+    margin-top: 2rem;
+  }
+}
 .ui-things {
-  background: $white;
+  // background: $white;
+  width: 70%;
+  margin: 0 auto;
   &::after {
     content: '';
     display: block;
     clear: both;
+  }
+  @include breakpoint(small) {
+    width: 80%;
   }
 }
 .ui-elements {
@@ -286,6 +319,18 @@ button:focus {
   background-color: $grey;
 }
 
+.button-examples {
+  .btn {
+    @include breakpoint(small) {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .btn-small {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
 /*****************************************************
 
 Glyphs
@@ -293,7 +338,9 @@ Glyphs
 .iconography-wrapper {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background: $white;
+  width: 70%;
+  margin: 0 auto;
+  // background: $white;
   box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
   @include breakpoint(small) {
     width: 80%;
@@ -303,6 +350,11 @@ Glyphs
 .another-wrapper {
   width: 90%;
   text-align: center;
+  .glyphicon {
+    @include breakpoint(small) {
+      margin: .4rem;
+    }
+  }
 }
 
 
@@ -321,9 +373,9 @@ Sidebar
     padding-right: 0;
     width: 100%;
   }
-  .brandLogo {
-    border: none !important;
-    display: inline-block;
+  @include breakpoint(small) {
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
   }
   .sidebar {
@@ -339,6 +391,12 @@ Sidebar
       overflow: hidden;
       border: none;
     }
+    @include breakpoint(small) {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border: none;
+    }
     h1 {
       display: block;
       background: $green;
@@ -350,10 +408,13 @@ Sidebar
       @include breakpoint(medium) {
         background-size: cover;
       }
+      @include breakpoint(small) {
+        background-size: cover;
+      }
       a {
         border: none !important;
         display:inline-block;
-        width: 100%;
+        width: 90%;
       }
       img {
         margin: 0.75em auto;
@@ -369,6 +430,31 @@ Sidebar
         list-style: none;
         margin-left: -4px;
         padding: 0;
+        @include breakpoint(small) {
+          display: -webkit-inline-box;
+          display: inline-box;
+          display: -moz-inline-box;
+          display: -o-inline-box;
+          width: 28%;
+        }
+        @include breakpoint(medium) {
+          display: -webkit-inline-box;
+          display: inline-box;
+          display: -moz-inline-box;
+          display: -o-inline-box;
+          width:28%;
+        }
+
+        @include breakpoint(xSmall) {
+          display: -webkit-inline-box;
+          display: inline-box;
+          display: -moz-inline-box;
+          display: -o-inline-box;
+          width: 18%;
+        }
+        @media (max-width: 979px) and (min-width: 768px) {
+          width: 100%;
+        }
         li {
           padding-top: 25%;
           font-size: 1rem;
@@ -378,12 +464,23 @@ Sidebar
           @include breakpoint(medium) {
             padding-top: 0;
           }
+          @include breakpoint(small) {
+            padding-top: 0;
+            margin-left: 45%;
+            font-size: 1.2rem;
+          }
           &:hover {
             background: darken(#eceef3, 5%);
           }
           a {
             color: $blue;
             @include breakpoint(medium) {
+              line-height: 3;
+              text-align: center;
+              border: none;
+              padding: .5rem 0;
+            }
+            @include breakpoint(small) {
               line-height: 3;
               text-align: center;
               border: none;
@@ -410,6 +507,7 @@ Sidebar
 
 .first-container {
   padding-top: 5%;
+
   h1 {
     font-weight: 400;
     color: $blue;
@@ -417,11 +515,18 @@ Sidebar
 }
 
 .main-section {
-  width: 83.3333%;
+  width: 88.33333%;
   float: right;
   margin: 0 auto;
+  @include breakpoint(large) {
+    width: 85.33333%;
+  }
 }
 
-.primary-container {
+.primary-content {
   float: none;
+}
+
+.margin-fix {
+  margin-left: 0;
 }

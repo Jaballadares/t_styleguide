@@ -797,6 +797,9 @@ a {
 /* ==========================================================================
   Buttons
 ========================================================================== */
+button:focus {
+  outline: 0; }
+
 .btn {
   background: #003D4C;
   color: #fff;
@@ -871,27 +874,39 @@ a {
     background: #9b3dc5; }
 
 .btn-green {
-  background: #62a70f; }
+  background: #62a70f;
+  border-radius: 4px;
+  transition: all 0.23s ease-in-out 0s; }
   .btn-green:hover,
   .btn-green:focus {
-    background: #78cc12; }
+    background: #7dd613; }
 
 .btn-red {
-  background: #d50058; }
+  background: #CE0058;
+  border-radius: 4px;
+  transition: all 0.23s ease-in-out 0s; }
   .btn-red:hover,
   .btn-red:focus {
-    background: #ef0063; }
+    background: #ff1c7d; }
 
 .btn-grey {
-  background: #b4bcbc; }
+  background: #54575a;
+  border-radius: 4px;
+  transition: all 0.23s ease-in-out 0s; }
   .btn-grey:hover,
   .btn-grey:focus {
-    background: #99a4a4; }
+    background: #797d82; }
 
 .btn-large {
   font-size: 15px;
   padding: 11px 30px 9px;
   min-width: 156px; }
+
+.btn-cancel:before {
+  content: 'x';
+  text-align: left;
+  margin-right: .3rem;
+  font-weight: bold; }
 
 .btn-x-large {
   font-size: 16px;
@@ -3316,6 +3331,19 @@ a {
 .glyphicon-menu-up:before {
   content: "\e260"; }
 
+select {
+  background-color: #FAFAFA;
+  height: 2.3125rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 0.875rem;
+  border-radius: 0;
+  width: 90%;
+  margin: 0 0 1rem 0;
+  color: #54575a;
+  font-weight: 300;
+  letter-spacing: .05rem; }
+
 /**** import classes ****/
 /* ==========================================================================
   Classes
@@ -3415,7 +3443,7 @@ a {
   .white h3, .white h4 {
     color: #333; }
   .white .text-red {
-    color: #d50058; }
+    color: #CE0058; }
   .white.border-bottom {
     border-bottom: 8px solid #666; }
 
@@ -3521,7 +3549,7 @@ a {
   Text
 **** **** **** **** ****/
 .text-red {
-  color: #d50058; }
+  color: #CE0058; }
 
 .text-purple {
   color: #8332a7; }
@@ -3703,7 +3731,7 @@ a {
       text-align: center;
       padding: 6px 0 0 0;
       color: #fff;
-      background: #d50058;
+      background: #CE0058;
       width: 40px;
       height: 40px;
       border-radius: 100%; }

@@ -23,7 +23,7 @@
       <ul class="side-nav">
         <li class="heading"><a href="#colors">Colors</a></li>
         <li><a href="#typography">Typography</a></li>
-        <li><a href="#ui-elements">UI Elements</a></li>
+        <li><a href="#ui-elements" style="white-space: nowrap;">UI Elements</a></li>
         <li><a href="#icons">Icons</a></li>
       </ul>
     </nav>
@@ -33,12 +33,14 @@
 <section class="main-section">
   <div class="primary-container">
   <div class="container first-container">
+  <div class="row margin-fix">
   <h1>Styles</h1>
+  </div>
   <div class="colors-section">
     <div class="row">
 
       <!-- end typography -->
-      <div class="color-palette col-md-11" id="colors">
+      <div class="color-palette" id="colors">
         <h2 class="sg-section-header">Colors</h2>
           <div class="row click-notification"><u>Click</u> color to copy to clipboard</div>
         <section class="colors">
@@ -116,6 +118,21 @@
               </footer>
             </div>
           </div>
+
+            <div class="swatch-container pt-7241c">
+
+              <div class="front red">
+                <div class="button-wrap">
+
+                  <button class="hover-notification">Copy to Clipboard</button>
+                </div>
+                <footer class="details">
+                  <p>Talix Red
+                    <span class="hex-code" id="copyBitch">#CE0058</span>
+                  </p>
+                </footer>
+              </div>
+            </div>
         </section>
       </div>
 
@@ -151,20 +168,38 @@
     <div class="row ui-things">
       <div class="button-examples panel-examples">
         <h3>Buttons</h3>
-        <button class="btn-small">Small Button</button>
-        <button class="btn">Small Button</button>
-        <a href="" class="btn">Small Button</a>
-
-        <button class="btn btn-green">Green Button</button>
+        <button class="btn btn-small">.btn-small</button>
+        <button class="btn btn-green">.btn-green</button>
+        <button class="btn btn-red">.btn-red</button>
+        <button class="btn btn-grey">.btn-grey</button>
+        <button class="btn btn-red btn-cancel">Cancel</button>
       </div>
 
 
-      <div class="checkbox-examples panel-examples">
-        <section class="checkbox-section">
+      <div class="checkbox-examples panel-examples row">
+        <section class="checkbox-section col-md-6">
           <h3>Checkbox Examples</h3>
-          <input type="checkbox" id="tl-checkbox">
-          <label for="tl-checkbox" class="tl-label"></label>
+          <input type="checkbox" class="radio-button">
+          <!-- id="tl-checkbox" -->
+          <label for="tl-checkbox"></label>
+          <!-- class="tl-label" -->
+
         </section>
+        <section class="col-md-6">
+          <h3>Radio Examples</h3>
+          <input type="radio" class="radio-button">
+        </section>
+      </div>
+
+
+
+      <div class="selectbox-section">
+        <label for="selectbox" style="display:block; line-height:2;">Select Box</label>
+        <select name="select" id="selectbox" class="select">
+          <option value="Taxonomy">Taxonomy</option>
+          <option value="NLP">NLP</option>
+          <option value="NLU">NLU</option>
+        </select>
       </div>
 
     </div>
@@ -215,16 +250,16 @@
     <div class="iconography-wrapper row" style="padding-top: 1rem;">
 
       <div class="another-wrapper">
-        <div class="icon-wrapper col-md-3">
+        <div class="icon-wrapper col-md-3 col-sm-2">
           <i class="glyphicon glyphicon-question-sign"></i> .glyphicon-questions
         </div>
-        <div class="icon-wrapper col-md-3">
-          <i class="glyphicon glyphicon-edit"></i> .glyphicon-edit
+        <div class="icon-wrapper col-md-3 col-sm-2">
+          <i class="glyphicon glyphicon-user"></i> .glyphicon-user
         </div>
-        <div class="icon-wrapper col-md-3">
-          <i class="glyphicon glyphicon-print"></i> .glyphicon-print
+        <div class="icon-wrapper col-md-3 col-sm-2">
+          <i class="glyphicon glyphicon-th-list"></i> .glyphicon-th-list
         </div>
-        <div class="icon-wrapper col-md-3">
+        <div class="icon-wrapper col-md-3 col-sm-2">
           <i class="glyphicon glyphicon-ok"></i>
           .glyphicon-ok
         </div>

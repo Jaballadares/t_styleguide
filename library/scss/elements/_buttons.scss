@@ -2,6 +2,9 @@
   Buttons
 ========================================================================== */
 
+button:focus {
+  outline: 0;
+}
 
 .btn {
   background: $blue;
@@ -89,25 +92,31 @@
 
 .btn-green {
   background: $green;
+  border-radius: 4px;
+  transition: all .23s ease-in-out 0s;
   &:hover,
   &:focus {
-    background: lighten($green, 8%);
+    background: lighten($green, 10%);
   }
 }
 
 .btn-red {
   background: $red;
+  border-radius: 4px;
+  transition: all .23s ease-in-out 0s;
   &:hover,
   &:focus {
-    background: lighten($red, 5%);
+    background: lighten($red, 15%);
   }
 }
 
 .btn-grey {
-  background: #b4bcbc;
+  background: $grey;
+  border-radius: 4px;
+  transition: all .23s ease-in-out 0s;
   &:hover,
   &:focus {
-    background: darken(#b4bcbc, 10%);
+    background: lighten($grey, 15%);
   }
 }
 
@@ -116,6 +125,15 @@
   font-size: 15px;
   padding: 11px 30px 9px;
   min-width: 156px;
+}
+
+.btn-cancel {
+  &:before {
+    content: 'x';
+    text-align: left;
+    margin-right: .3rem;
+    font-weight: bold;
+  }
 }
 
 .btn-x-large {
